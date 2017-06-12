@@ -1,0 +1,23 @@
+.cover-main {
+	background: #2b2d34 url(../img/main-final.jpg) center;
+    background-size: cover;
+    min-height: 40rem;
+    height: auto;
+    border-radius: 0;
+    width: 100%;
+    color: #fff;
+    padding-top: 1rem;
+}
+
+.cover-container {
+	display: table;
+    height: 100%;
+    min-height: 40rem;
+    margin: 0 auto;
+}
+
+.intense {
+	cursor: pointer;
+	cursor: url('../img/plus_cursor.png') 50 50, pointer;
+	cursor: -webkit-image-set(url('../img/plus_cursor.png') 2x), auto;
+}
