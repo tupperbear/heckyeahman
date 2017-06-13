@@ -21,3 +21,7 @@
 	cursor: url('../img/plus_cursor.png') 50 50, pointer;
 	cursor: -webkit-image-set(url('../img/plus_cursor.png') 2x), auto;
 }
+
+.filter-control {
+    margin-bottom: 5px;
+}
