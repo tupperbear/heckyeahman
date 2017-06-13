@@ -16,6 +16,10 @@
     margin: 0 auto;
 }
 
+.basic-content {
+    padding: 5rem 0;
+}
+
 .intense {
 	cursor: pointer;
 	cursor: url('../img/plus_cursor.png') 50 50, pointer;
@@ -24,4 +28,14 @@
 
 .filter-control {
     margin-bottom: 5px;
+}
+
+.details .label {
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+.details .value {
+    font-weight: 600;
+    margin-bottom: 40px;
 }
