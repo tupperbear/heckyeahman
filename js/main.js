@@ -21,14 +21,20 @@
 		var name = $('input[name=name]');
 		var email = $('input[name=email]');
 		var message = $('textarea[name=message]');
+		var error = $('#control-form-error');
+		var success = $('#control-form-success');
 
 		if (!name.val() || !message.val()) {
-			$('#control-form-error').show().text('Please complete all fields.');
+			error.show().text('Please complete all fields.');
+			form.find('button').text('Send Message').prop('disabled', false);
+			return false;
 		} else if (!isEmail(email.val())) {
-			$('#control-form-error').show().text('Valid email required.');
+			error.show().text('Valid email required.');
+			form.find('button').text('Send Message').prop('disabled', false);
+			return false;
+		} else {
+			form.find('button').text('Sending...').prop('disabled', true);
 		}
-
-		form.find('button').text('Sending...').prop('disabled', true);
 
 		$.ajax({
 			url: "https://formspree.io/ohheckyeahman@gmail.com", 
@@ -49,9 +55,9 @@
 		    	form.find('button').text('Send Message').prop('disabled', false);
 
 		    	// Show success message
-		    	$('#control-form-success').show().text('Thank you, your message has been sent.');
+		    	success.show().text('Thank you, your message has been sent.');
 		    	setTimeout(function() {
-		    		$('#control-form-success').fadeOut();
+		    		success.fadeOut();
 		    	}, 3000);
 		    },
 		    error: function (jqXHR, textStatus, errorThrown) {
